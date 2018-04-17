@@ -1,0 +1,29 @@
+#pifagor{
+    display: table;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+.row{
+    display: table-row;
+
+}
+.cell{
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    background-origin: padding-box;
+    border: 1px solid black;
+    text-align: center; 
+    font-size: 18px;
+}
+
+.diagonal{
+    background-color: green;
+}
+.upper{
+    background-color: yellowgreen;
+}
+.under{
+    background-color: blue;
+}
