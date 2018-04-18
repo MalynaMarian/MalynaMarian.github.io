@@ -54,13 +54,11 @@ function generateSumNumbers2(n) {
     }
     if (sum > 10){
         var str1 = sum.toString();
-        //console.log(typeof(sum));
         sum = 0;
             for (var j=0; j < str1.length; j++){
-                var int1 = parseInt(str1[i]);
+                var int1 = parseInt(str1[j]);
                 sum += int1;
             }
     }
-    //console.log(typeof(sum));
     return sum;
 }
