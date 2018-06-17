@@ -1,64 +1,54 @@
-//Функція підрахунку парних і не парних чисел
-function countNumbers (n) {
-    var str = n.toString();
-    var result = {odd:0, even:0};
-    for (var i = 0; i < str.length; i++ ){
-        if (str[i] % 2 == 0){
-            result.odd +=1;
-        }
-        else{
-        result.even +=1;
-        }
+//Хеш таблиця
+var cats = {
+    first: "myrzuk",
+    second: "barsyk"
+};
+console.log(cats["first"]);
+
+//Обєкт
+var user = {
+    name: "Marian",
+    surname: "Malyna",
+    age: 25
+};
+console.log(user.name);
+
+//За допомогою класичного обєкта=конструктора
+var dogs = new Object();
+dogs["first"] = "Marian";
+dogs.going = function(){
+    console.log(dogs["first"]);
+};
+
+
+function Audi(id, volume, color) {
+    this.id = id;
+    this.volume = volume;
+    this.color = color
+    this.drive = function(){
+        console.log(this.id);
+    };
+};
+Audi.drive = function (){
+    console.log(this.volume);
+};
+Audi.prototype.drive = function (){
+    console.log(this.volume);
+};
+
+
+
+
+var Audi = function (id, volume, color) {
+    this.id = id;
+    this.volume = volume;
+    this.color = color
+    var a = function(){
     }
-    return result;
-}
-//Функція підрахунку суми 1-ий спосіб
-function generateSumNumbers(n) {
-    var str = n.toString();
-    var sum = 0;
-    for (var i = 0 ; i<str.length; i++){
-        var int = parseInt(str[i]);
-        sum += int;
-    }
-    if (sum > 10){
-        n = sum;
-        generateSumNumbers(n);
-    }
-    return sum;
-}
-//Функція підрахунку суми 2-ий спосіб
-function generateSumNumbers1(n) {
-    var str = n.toString();
-    while (str.length > 1){
-        var sum = 0;
-        for (var i = 0 ; i<str.length; i++){
-            var int = parseInt(str[i]);
-            sum += int;
-        }
-        if (sum > 10){
-            str = sum.toString();
-        }
-        else{
-            break;
-        }
-    }
-    return sum;
-}
-//Функція підрахунку суми 3-ий спосіб
-function generateSumNumbers2(n) {
-    var str = n.toString();
-    var sum = 0;
-    for (var i = 0 ; i<str.length; i++){
-        var int = parseInt(str[i]);
-        sum += int;
-    }
-    if (sum > 10){
-        var str1 = sum.toString();
-        sum = 0;
-            for (var j=0; j < str1.length; j++){
-                var int1 = parseInt(str1[j]);
-                sum += int1;
-            }
-    }
-    return sum;
-}
+};
+
+var audi_1 = new Audi (1, 3.0, "red");
+
+
+
+

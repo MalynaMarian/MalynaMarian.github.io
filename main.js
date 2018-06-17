@@ -3,10 +3,14 @@ var start = confirm("Розпочинаємо ввід імен?")
 
 
 if (start == true) {
-    var quanity = Number(prompt("Введіть кількість імен"));
-    for (i = 0; i<quanity; i++ ) {
-        names.push(prompt("Введіть імя"));
-    }
+    //var quanity = Number(prompt("Введіть кількість імен"));
+    //for (i = 0; i<quanity; i++ ) {
+    //    names.push(prompt("Введіть імя"));
+   // }
+   do{
+    names.push(prompt("Введіть імя"));
+    var repeat = confirm("Продовжуєм вводити імена?");
+   }while (repeat)
  }
  else{
    document.write ("Завдання не розпочато!");
